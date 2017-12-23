@@ -1,7 +1,7 @@
-# resume
-Resume
+# Resume
+My resume written in LaTex
 
-### Preview
+## Preview
 ![Resume PDF](/resume.pdf)
 
 # Original source
