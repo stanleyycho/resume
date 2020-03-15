@@ -3,7 +3,6 @@
 % Author: Stanley Ho
 %
 %
-% Original source : Sourabh Bajaj
 % License : MIT
 %------------------------
 
@@ -43,6 +42,10 @@
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Set table in itemized list  
+\newlist{deflist}{description}{2}
+\setlist[deflist]{labelwidth=2cm,leftmargin=!}
 
 %-------------------------
 % Custom commands
@@ -88,31 +91,36 @@
   \resumeSubHeadingListStart
     \item {Experienced software professional with hands-on programming skills}
     \item {Excellent skills in developing robust software and in communication}
-    \item {Strong problem-solving and analytical skills}
+    \item {Passionate in problem-solving with strong analytical skills}
     %and knowledge in computer vision/imaging processing
   \resumeSubHeadingListEnd
   
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
   \resumeSubHeadingListStart
-    \item{
-      \textbf{Languages}{: C++, C, Matlab, Python, JavaScript, Shell script, Java}
-      }
-    \item{
-      \textbf{Technologies}{: Intel IPP, Angular, Apache httpd, OpenCV, Docker, Linux, Jenkins}
+    \item[]{
+      \begin{deflist}
+        \item[\textbf{Languages}]{C++, C, Python, JavaScript, Matlab, Shell Script, Java}
+      \end{deflist}
+    }
+    \item[]{
+      \begin{deflist}
+        \item[\textbf{Technologies}]{Intel IPP, OpenCV, Angular, React, Docker, Linux, Jenkins, Nodejs, PostgreSQL}
+      \end{deflist}
     }
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
       {Deepmap}{Palo Alto, CA}
       {Software Engineer}{May 2019 - Present}
       \resumeItemListStart
+        \resumeItem{On Vehicle Software}
+          {Contributed to development of on-vehicle software.}
         \resumeItem{HD Maps}
-          {Contributed to building HD maps solution for autonomous vehicles.}
+          {Contributed to developing map update in map geometry and integration tests.}
       \resumeItemListEnd
       
     \resumeSubheading
@@ -120,65 +128,49 @@
       {Senior Software Engineer}{Nov 2013 - May 2019}
       \resumeItemListStart
         \resumeItem{Microscopy Image Server}
-          {Implemented giga-pixel microscopy image server in C++ using Apache httpd server to streamline workflow and to improve scability and performance by 50\%.}
+          {Implemented high resolution microscopy image http server in C++. Improved scalability, response time and throughput by 50\%.}
+        \resumeItem{Machine Learning Pipeline}
+          {Developed web-based image analysis platform, which servers as data management and machine learning pipeline for data labeling and model training. }
+          %The platform has revolutionized tissue diagnostics and accelerated pharmaceutical development process.}
         \resumeItem{Detection}
-          {Contributed to developing cell detection algorithm, which classifies cell types using deep learning, and integrated it to imaging platform.}
-        \resumeItem{Platform}
-          {Contributed to developing features in web-based image analysis platform in both front-end and back-end, including image viewer, analysis algorithms and analysis platform. The platform has revolutionized tissue diagnostics and accelerated pharmaceutical development process.}
-        \resumeItem{Image server}
-          {Developed features in image server written in Java to support multiple types of image files.}
-        \resumeItem{Segmentation}
-          {Prototyped semi-automatic interactive segmentation algorithm for real-time tissue segmentation tool in Matlab. Implemented it in C++ and deployed to  production.}
-        \resumeItem{Dev Environment}
-          {Improved unit testing, continuous integration and deployment processes to streamline software development.}
+          {Contributed to developing cell detection algorithm in deep learning. Integrated and productized it to image analysis platform.}
         \resumeItem{Framework}
-          {Contributed to developing features, maintained framework, unit testing and documentation of image analysis SDK in both C++ and Matlab.}
+          {Contributed to developing features, maintaining framework and unit testing of image analysis SDK in both C++ and Matlab.}
+        \resumeItem{Segmentation}
+          {Implemented semi-automatic interactive segmentation algorithm and tool for real-time tissue segmentation in Matlab and in C++.}
+        \resumeItem{DevOps}
+          {Improved unit testing, continuous integration and continuous delivery to streamline software development.}
       \resumeItemListEnd
-
-    
-
   \resumeSubHeadingListEnd
 
 %-----------CERTIFICATION-----------------
-%\section{Certification}
-%  \resumeSubHeadingListStart
-%    \item{
-%      \textbf{Nvidia Deep Learning Institute} {Fundamentals of Deep Learning for Computer Vision}
-%      \href{https://courses.nvidia.com/certificates/2ccc14d1bf9746a1ab360a48b94e4af3}{https://courses.nvidia.com/certificates/2ccc14d1bf9746a1ab360a48b94e4af3}
-%    }
-%  \resumeSubHeadingListEnd
-  
-%-----------PROJECTS-----------------
-%\section{Projects}
-%  \resumeSubHeadingListStart
-%    \resumeSubItem{QuantSoftware Toolkit}
-%      {Open source python library for financial data analysis and machine learning for finance.}
-%    \resumeSubItem{Github Visualization}
-%      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
-%    \resumeSubItem{Recommendation System}
-%      {Music and Movie recommender systems using collaborative filtering on public datasets.}
-%    \resumeSubItem{Mac Setup}
-%      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
-%  \resumeSubHeadingListEnd
-
+\section{Certifications}
+  \resumeSubHeadingListStart
+    %\item[]{
+    %  \textbf{Nvidia Deep Learning Institute} \href{https://courses.nvidia.com/certificates/2ccc14d1bf9746a1ab360a48b94e4af3}{Fundamentals of Deep Learning for Computer Vision}
+    %}
+    \item[]{
+      \textbf{Coursera} \href{https://www.coursera.org/account/accomplishments/specialization/G8TS8APA3NK6}{Deep Learning Specialization}, \href{https://www.coursera.org/account/accomplishments/specialization/ACYMK9U2ARYZ}{TensorFlow in Practice Specialization}
+    }
+  \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of California, Santa Barbara}{Santa Barbara, CA}
-      {Master of Science, Electrical and Computer Engineering; Award: Barpal Fellowship}{Jun. 2013}
+      {Master of Science, Electrical and Computer Engineering; Award: Barpal Fellowship}{Sep 2011 - Jun. 2013}
     %\resumeSubheading
     %{Emphasis on Signal Processing, Minor Computer Engineering} {}
     \resumeItemListStart
         \resumeItem{Project}
           {Improved 3D image registration routine by aligning 2D image sequences in C.}
         \resumeItem{Coursework}
-          {Computer Vision, Pattern Recognition (Machine Learning), Signal Processing, Digital Speech Processing}
+          {Computer Vision, Pattern Recognition (Machine Learning), Digital Speech Processing}
      \resumeItemListEnd
     \resumeSubheading
       {National Chiao Tung University}{Hsinchu, Taiwan}
-      {Bachelor of Science, Industrial Engineering}{Jun. 2010}
+      {Bachelor of Science, Industrial Engineering}{Sep 2006 - Jun. 2010}
   \resumeSubHeadingListEnd
 %-------------------------------------------
 \end{document}
