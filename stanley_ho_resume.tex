@@ -49,18 +49,24 @@
 
 %-------------------------
 % Custom commands
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}
+    \vspace{-7pt}
+}
+
 \newcommand{\resumeItem}[2]{
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+\newcommand{\resumeSummary}[1]{
+  \vspace{11pt}
+  	\small {#1 \vspace{-6pt}}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -88,24 +94,19 @@
 
 %--------SUMMARY OF QUALIFICATIONS------------
 \section{Summary}
-  \resumeSubHeadingListStart
-    \item {Experienced software professional with hands-on programming skills}
-    \item {Excellent skills in developing robust software and in communication}
-    \item {Passionate in problem-solving with strong analytical skills}
-    %and knowledge in computer vision/imaging processing
-  \resumeSubHeadingListEnd
+	\hspace{3ex}{Software professional with 7+ years experience in design and developing robust software. Equipped with hands-on programming and problem-solving skills. Adapted to fast-paced environment and excelled in cross-functional team work. Possess passion for solving challenging problems and knowledge in computer vision/imaging processing. }
   
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
   \resumeSubHeadingListStart
     \item[]{
       \begin{deflist}
-        \item[\textbf{Languages}]{C++, C, Python, JavaScript, Matlab, Shell Script, Java}
+        \item[\textbf{Languages}]{C++, C, Python, JavaScript, Matlab, Shell Script, Java, SQL} \vspace{-5pt}
       \end{deflist}
     }
     \item[]{
       \begin{deflist}
-        \item[\textbf{Technologies}]{Intel IPP, OpenCV, Angular, React, Docker, Linux, Jenkins, Nodejs, PostgreSQL}
+        \item[\textbf{Technologies}]{Intel IPP, OpenCV, Boost, Angular, React, Docker, Linux, Jenkins, Nodejs} \vspace{-5pt}
       \end{deflist}
     }
   \resumeSubHeadingListEnd
@@ -116,29 +117,32 @@
     \resumeSubheading
       {Deepmap}{Palo Alto, CA}
       {Software Engineer}{May 2019 - Present}
+      \resumeSummary 
+      {Contributed to on-board software for building high-definition maps for autonomous vehicles.}
       \resumeItemListStart
-        \resumeItem{On-vehicle Software}
-          {Contributed to development of on-vehicle software.}
-        \resumeItem{HD Maps}
-          {Contributed to developing map update in map geometry and integration tests.}
+        \resumeItem {Data Collection}
+        {Developed data collection coverage analysis feature in C++, which scales up mapping capacity, and mentored interns in the project.}
+        \resumeItem {Map Management}
+        {Contributed to on-board software and UI for map management.}
+        \resumeItem {Benchmark}
+        {Built benchmark framework in Python for on-board map change detection service.}
       \resumeItemListEnd
     \resumeSubheading
       {Roche Tissue Diagnostics}{Santa Clara, CA}
       {Senior Software Engineer}{Nov 2013 - May 2019}
+      \resumeSummary 
+      {Built cloud-based images analysis platform for Pathology. The platform has revolutionized tissue diagnostics and accelerated pharmaceutical development process.}
       \resumeItemListStart
-        \resumeItem{Microscopy Image Server}
-          {Implemented high resolution microscopy image http server in C++. Improved scalability, response time and throughput by 50\%.}
-        \resumeItem{Machine Learning Pipeline}
-          {Developed web-based image analysis platform, which servers as data management and machine learning pipeline for data labeling and model training. }
-          %The platform has revolutionized tissue diagnostics and accelerated pharmaceutical development process.}
-        \resumeItem{Detection}
+        \resumeItem {Image Server}
+          {Implemented high resolution microscopy image HTTP server in C++. Improved scalability, response time and throughput by 50\%.}
+        \resumeItem {Machine Learning Pipeline}
+          {Built cloud-based image analysis pipeline, which serves as data management and pipeline for data labeling and machine learning model training.}
+        \resumeItem {Detection}
           {Contributed to developing cell detection algorithm in deep learning. Integrated and productized it to image analysis platform.}
-        \resumeItem{Framework}
-          {Contributed to developing features, maintaining framework and unit testing of image analysis SDK in both C++ and Matlab.}
-        \resumeItem{Segmentation}
+        \resumeItem {Framework}
+          {Contributed to developing features of image processing/computer vision library in C++.}
+        \resumeItem {Segmentation}
           {Implemented semi-automatic interactive segmentation algorithm and tool for real-time tissue segmentation in Matlab and in C++.}
-        \resumeItem{DevOps}
-          {Improved unit testing, continuous integration and continuous delivery to streamline software development.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -163,12 +167,6 @@
       {Master of Science, Electrical and Computer Engineering}{Sep 2011 - Jun 2013}
     %\resumeSubheading
     %{Emphasis on Signal Processing, Minor Computer Engineering} {}
-    \resumeItemListStart
-        \resumeItem{Project}
-          {Improved 3D image registration routine by aligning 2D image sequences in C.}
-        \resumeItem{Coursework}
-          {Computer Vision, Pattern Recognition, Digital Speech Processing}
-     \resumeItemListEnd
     \resumeSubheading
       {National Chiao Tung University}{Hsinchu, Taiwan}
       {Bachelor of Science, Industrial Engineering}{Sep 2006 - Jun 2010}
